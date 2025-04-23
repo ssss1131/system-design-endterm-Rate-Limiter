@@ -1,0 +1,17 @@
+server:
+  port: 9001
+
+spring:
+  application:
+    name: rate-limiter-demo
+
+ratelimit:
+  capacity: 20
+  refill-tokens: 20
+  refill-period: PT1M
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,prometheus
